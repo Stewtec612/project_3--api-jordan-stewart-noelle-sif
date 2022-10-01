@@ -1,0 +1,10 @@
+TASK:
+    Create an application that requests and responds using an API. 
+    It can be text based, or creating a website 
+
+*Focus on building the core of the application first*
+    1)This app must give the user the ability to request something from an API, and the API responds with requested data
+    2)what real world reason would someone use this app for?
+    3) Name functions it will use, give them descriptive names so we know what it is intended for
+    4)The user will have the ability to save data they desire and can review the data they bookmarked
+    5)
