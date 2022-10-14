@@ -1,7 +1,9 @@
+""" initial set up for Mystic Fate DB, modeled after bookstore from project 2 """
+
 import sqlite3
 import os
 
-db = os.path.join('database', 'books.db')
+db = os.path.join('database', 'fates.db')
 
 class Fate:
     """ Represents one user 'fate'.
@@ -21,8 +23,8 @@ class Fate:
         """ Saves a generated user fate in the program. """
         self.fate_store._add_fate(self)
 
-    def delete(self):
-        self.fate_store._delete_book(self)
+    # def delete(self):
+    #     self.fate_store._delete_fate(self)
 
     
 class FateStore:
@@ -42,27 +44,27 @@ class FateStore:
             conn.close()
 
         
-        def _add_fate(self, fate):
-            """Adds fate to fate_store (DB)"""
+        # def _add_fate(self, fate):
+        #     """Adds fate to fate_store (DB)"""
 
-            insert_sql = 'INSERT INTO fates (tarot, animal, horoscope) VALUES (?, ?, ?)'
+        #     insert_sql = 'INSERT INTO fates (tarot, animal, horoscope) VALUES (?, ?, ?)'
 
-            try:
-                with sqlite3.connect(db) as conn:
-                    res = conn.execute(insert_sql, (fate.tarot, fate.animal, fate.horoscope) )
-                    new_id = res.lastrowid # figure out a new id based on what the last row in table is
-                    fate.id = new_id #set this fate's id
+        #     try:
+        #         with sqlite3.connect(db) as conn:
+        #             res = conn.execute(insert_sql, (fate.tarot, fate.animal, fate.horoscope) )
+        #             new_id = res.lastrowid # figure out a new id based on what the last row in table is
+        #             fate.id = new_id #set this fate's id
 
-                    exception_error = False # TODO set to False (if no exception, fate successfully added)
-                    return exception_error
+        #             exception_error = False # TODO set to False (if no exception, fate successfully added)
+        #             return exception_error
 
-            except sqlite3.IntegrityError as e:
-                exception_error = True # set to True, code reaches the exception
-                raise FateError(f'Error - this fate cannot be added.' {fate}) from e
+        #     except sqlite3.IntegrityError as e:
+        #         exception_error = True # set to True, code reaches the exception
+        #         raise FateError(f'Error - this fate cannot be added.' {fate}) from e
 
-            finally:
-                conn.close()
-                return exception_error
+            # finally:
+            #     conn.close()
+            #     return exception_error
 
         
         def get_all_fates(self):
