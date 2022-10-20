@@ -8,6 +8,7 @@ tarot_data = response.json()
 
 tarot_card = tarot_data['cards']
 
+
 def tarot_name_request():
     #gets card name from API
     for i in tarot_card:
@@ -15,6 +16,7 @@ def tarot_name_request():
         card_name = (i['name'])
 
     return card_name
+
 
 def tarot_meaning_request():
     #gets the cards meaning from API
