@@ -1,4 +1,8 @@
-""" initial set up for Mystic Fate DB, modeled after bookstore from project 2 """
+""" initial set up for Mystic Fate DB, modeled after bookstore from project 2
+
+    TASK: Create database that stores the most recent generated fate and able to save the generated fate if selected
+ """
+
 import sqlite3
 import os
 

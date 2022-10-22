@@ -1,1 +1,1 @@
-""" Manage API information. Get API information from individual API modules, send packaged results to user_interface """
+""" TASK: From all 3 api modules import the functions that access the api and put them in one object"""

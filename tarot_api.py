@@ -1,3 +1,5 @@
+'''TASK: access the tarot card url that picks a random tarot card from the list and select the name and meaining_up items from the json object'''
+
 import requests
 #Opens channel to the a tarot card API
 tarot_url = "https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=1"
