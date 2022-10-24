@@ -7,3 +7,4 @@ def ask_questions():
     get_zodiac_sign = input('What is your zodiac Sign?: ')
 
     return get_name, get_zodiac_sign
+
