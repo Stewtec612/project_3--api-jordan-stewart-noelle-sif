@@ -1,5 +1,3 @@
-''' TASK: access random zoo animal api and collect the image and name items from the json object '''
-
 import requests
 #opens channel to animal API
 animal_url = "https://zoo-animal-api.herokuapp.com/animals/rand"

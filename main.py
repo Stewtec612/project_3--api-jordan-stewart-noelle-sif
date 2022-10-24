@@ -1,5 +1,3 @@
-'''TASK: Main module that bring all modules together and navigate the program between them '''
-
 from fate_store import Fate
 import fate_store
 

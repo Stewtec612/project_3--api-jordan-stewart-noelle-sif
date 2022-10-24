@@ -1,4 +1,4 @@
-'''TASK: Access the horoscope API and select the date and horoscope items in the json object'''
+
 
 import requests
 import users_sign
