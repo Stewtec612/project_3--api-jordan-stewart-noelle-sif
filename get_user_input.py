@@ -1,4 +1,3 @@
-
 '''
 Module that collects needed information that the other modules will use and create a faster process for asking questions
 '''
