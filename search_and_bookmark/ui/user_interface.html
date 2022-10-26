@@ -1,0 +1,72 @@
+<!DOCTYPE html>   <!--Stating the type is html-->
+<html>
+
+    <head>
+        <title>My Mystic Fortune Teller </title>  <!--the title of the webpage-->
+        <link rel="stylesheet" type="text/css" href="ui.css">
+    </head>
+
+    <body>  <!--website body-->
+
+        <h1 id="page-title">My Mystic Fortune Teller</h1> <!--ID FOR PAGE TITLE-->
+        <h1 id="author-name">"A Message from the Powers that be"</h1> <!--ID FOR AUTHOR NAME-->
+
+<br>
+    <div class="get_date"> <!--divider for dividing content into logical sections-->
+        
+        <h2>Enter your birthdate  </h2>
+            <p><form action="/action_page.php">
+                <label for="birthdate">Month:</label>
+                <input type="text" id="month" name="month"><br><br>
+                <label for="lname">Day:</label>
+                <input type="text" id="day" name="day"><br><br>
+                <label for="lname">Year:</label>
+                <input type="text" id="year" name="year"><br><br>    
+                <input type="submit" value="Submit">
+              </form>
+            </p>
+    
+    </div> <!--END OF divider -->       
+    
+    <div class="favorite-sections">
+<!--This will be an action listener for SUBMIT BUTTON animation of a spinning wheel or clock ticking -->
+        <h2>The Minds are working..... </h2>  
+           
+    </div>        
+        
+    <div class="get_horoscope" id="list-square">   <!--list of foods, square bullet points-->
+        <h2>Horoscope</h2>
+            <ul>
+                <li id="horoscope:"> Placeholder</li> <!--Only 1 element per ID -->
+                <li id="Empty String">Placeholder</li> <!--Only 1 element per ID -->
+                
+            </ul>
+    </div> 
+
+    <div class="get_tarrot">
+
+        <h2>The voices have spoken <br> This is your spirit Animal and Tarot Card: </h2>  <!--images for favorite-sections-->
+
+            <img class="favorite-image" src="animal.jpg" alt="Place holder for animal"
+            title="animal"
+            height="250"
+            width="350">
+        
+            <img class="favorite-image" src="tarot.jpg" alt="Place Holder for tarot"
+            title="tarot"
+            height="250"
+            width="350">
+
+    
+    </div>
+    
+    <div class="sources">   <!--favortie sections-->
+        <h2>Sources Cited</h2>
+    
+        <p>Here is a link to our sources used <a href=https://www.cleanpng.com/png-earless-seal-harbor-seal-sea-lion-walrus-seal-956355/download-png.html>Click Me to see behind the Curtain</a></p>
+
+    </div> 
+
+    </body>
+
+</html>
