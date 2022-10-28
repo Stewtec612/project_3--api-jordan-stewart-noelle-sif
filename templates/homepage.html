@@ -1,0 +1,34 @@
+<!DOCTYPE html>   <!--Stating the type is html-->
+<html>
+
+    <head>
+        <title>My Mystic Fortune Teller </title>  <!--the title of the webpage-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_interface_styles.css') }}">
+    </head>
+
+    <body>  <!--website body-->
+
+        <h1 id="page-title">My Mystic Fortune Teller</h1> <!--ID FOR PAGE TITLE-->
+        <h1 id="author-name">"A Message from the Powers that be"</h1> <!--ID FOR AUTHOR NAME-->
+
+<br>
+    <div class="get_date"> <!--divider for dividing content into logical sections-->
+        
+        <h2>Enter your birthdate  </h2>
+            <p><form action="/mystic_fetcher">
+                <label for="birthdate">Month:</label>
+                <input type="text" id="month" name="month"><br><br>
+                <label for="lname">Day:</label>
+                <input type="text" id="day" name="day"><br><br>
+                <label for="lname">Year:</label>
+                <input type="text" id="year" name="year"><br><br>    
+                <input type="submit" value="Submit">
+              </form>
+            </p>
+    
+    </div> <!--END OF divider -->       
+  
+
+    </body>
+
+</html>
