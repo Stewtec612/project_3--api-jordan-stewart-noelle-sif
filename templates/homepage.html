@@ -4,6 +4,9 @@
     <head>
         <title>My Mystic Fortune Teller </title>  <!--the title of the webpage-->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_interface_styles.css') }}">
+
+       <!--href="{{ url_for('static', filename='user_interface_styles.css') }}">-->
+        
     </head>
 
     <body>  <!--website body-->
@@ -14,15 +17,11 @@
 <br>
     <div class="get_date"> <!--divider for dividing content into logical sections-->
         
-        <h2>Enter your birthdate  </h2>
+        <h2>Enter your Zodiac Sign </h2>
             <p><form action="/mystic_fetcher">
-                <label for="birthdate">Month:</label>
-                <input type="text" id="month" name="month"><br><br>
-                <label for="lname">Day:</label>
-                <input type="text" id="day" name="day"><br><br>
-                <label for="lname">Year:</label>
-                <input type="text" id="year" name="year"><br><br>    
-                <input type="submit" value="Submit">
+                <label for="birthdate">Zodiac:</label>
+                <input type="text" id="zodiac" name="zodiac"><br><br> 
+                <input type="submit" value="Submit">  <!--add event listener-->
               </form>
             </p>
     
