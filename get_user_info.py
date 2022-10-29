@@ -2,7 +2,7 @@ def main():
     get_user_info()
 
 def get_user_info():
-    user_name = input('What is your name, wonderer?: ')
+    user_name = input('What is your name, wonderer? ')
 
     list_of_signs = '''
     Aries—March 21-April 19
@@ -31,7 +31,7 @@ def get_user_info():
 ________________________________________
 '''
     print(list_of_signs)
-    user_sign = input(f'Please tell me your zodiac sign, {user_name}:').lower
+    user_sign = input(f'Please tell me your zodiac sign, {user_name}: ').lower()
 
     return user_name, user_sign
 
