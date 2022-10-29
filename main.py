@@ -75,5 +75,7 @@ def save_fate():
     # call DB / fate_store's
     fate_store.save()
 
+
+
 if __name__ == '__main__':
     main()

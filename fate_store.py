@@ -1,4 +1,6 @@
-""" initial set up for Mystic Fate DB, modeled after bookstore from project 2 """
+""" initial set up for Mystic Fate DB, modeled after bookstore from project 2
+ """
+
 import sqlite3
 import os
 
