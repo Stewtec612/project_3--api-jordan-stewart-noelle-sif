@@ -5,15 +5,15 @@ import horoscope_api
 from fate_store import Fate
 from get_user_info import get_user_info
 
-api_data = {}
-
 
 def api_dictionary():
+    api_data = {}
 
     api_data.update({"Cards Name": tarot_api.get_tarot_name(),"Tarot Card Meaning": tarot_api.get_tarot_meaning(), "Animals Name": animal_api.get_animal_name(),
     "Animal's Picture": animal_api.get_animal_picture(), "Time":horoscope_api.get_time_of_horoscope(), "Users Horoscope": horoscope_api.get_horoscope_details()})
 
     return api_data
+
 
 def create_fate_object():
 
