@@ -1,3 +1,4 @@
+import re
 from flask import Flask, render_template, request
 from fate_store import _get_all_fates
 
@@ -17,15 +18,16 @@ def mystic_results():
     zodiac = request.args.get('fates') 
     print(zodiac)
 
-    # what was the user's birthday?
+    # what was the user's zodiac
+    print('form data is', request.args)
     zodiac = zodiac.get('zodiac')
-    
+
     # talk to apis
     # for example, api returns your spirit animal is zebra your horoscope is you will have a nice day 
     # this is example data, replace with data from the API 
-    animal_name = animal_name_request
-    animal_pic = animal_picture_request
-    horoscope = horoscope_data.get(horoscope)
+    animal_name = request.args.get('name')
+    animal_pic = request.args.get('pic')
+    horoscope = request.args.get('horoscope')
     tarot = tarot_card.get('tarot_data')
 
     # create new web page with results 
