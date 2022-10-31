@@ -51,7 +51,7 @@ def generate_new_fate():
 
     def get_tarot():
         print('todo make call to api and get random tarot card, add to Fate object')
-
+        
 
     def get_animal():
         print('todo make call to api and get random tarot card, add to Fate object')
