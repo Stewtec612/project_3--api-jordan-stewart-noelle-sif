@@ -32,13 +32,18 @@ class Fate:
 class FateStore:
 
     def __init__(self):
-        create_table_sql = 'CREATE TABLE IF NOT EXISTS fates (zodiac_sign text, tarot_card TEXT, animal TEXT, horoscope TEXT'
+        # fix SQL, match your parenthesis
+        create_table_sql = 'CREATE TABLE IF NOT EXISTS fates (zodiac_sign text, tarot_card TEXT, animal TEXT, horoscope TEXT)'
         conn = sqlite3.connect(db)
         with conn:
             conn.execute(create_table_sql)
         conn.close()
 
 
+    # If these methods are intended to be called by other 
+    # parts of the program, don't preface them with _
+    # names with _ mean that they are methods that should 
+    # only be used internally by the FateStore class. 
     def _save_fate(self, fate):
         """Adds fate to fate_store (DB)"""
         insert_sql = 'INSERT INTO fates (zodiac_sign, tarot_card, animal, horoscope) VALUES (?, ?, ?, ?)'

@@ -1,0 +1,2 @@
+git ignores empty directories so adding this placeholder file 
+just to make git not ignore your database directory

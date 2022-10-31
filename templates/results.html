@@ -49,6 +49,16 @@
     
     </div>
     
+
+    <div>
+        <form method="POST" action="save_fate">  <!-- anything that modifies the database should use POST-->
+            <input type="hidden" name="horoscope" value="{{ horoscope }}">
+            <input type="hidden" name="animal" value="{{ animal_image_url }}">
+            <button type="submit">Save your mystical results</button>
+        </form>
+    </div>
+
+
     <div class="sources">   <!--favortie sections-->
         <h2>Sources Cited</h2>
     
