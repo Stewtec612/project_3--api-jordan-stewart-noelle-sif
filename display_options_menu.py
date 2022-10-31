@@ -1,9 +1,5 @@
 import get_user_info
 
-def main():
-    display_user_options()
-
-
 def display_user_options():
     while True:
         try:
@@ -24,7 +20,4 @@ def display_user_options():
         
         except:
             print('Must enter a number from 1 - 3')
-
-if __name__ == '__main__':
-    main()
 
