@@ -59,11 +59,14 @@ def generate_new_fate():
 
     def display_fate():
         """ Display the Fate object for user, and ask them in they wish to save it """
-        print('todo display the user fate for them, and ask them if they want to save it.')
-        save_response = input('Enter 1 if you would like to save your newly generated Fate, or 2 if you wish to delete.')
+        print("\n".join("{}\t{}".format(k, v) for k, v in api_manager.api_dictionary().items()))
+        save_response = input('would you like to save your fate? y/n')
 
-        if save_response == 1:
+        if save_response.lower() == 'y':
             save_fate()
+        else:
+            main()
+
 
 def display_all_fates():
     print('todo display all Fates the user has saved')
