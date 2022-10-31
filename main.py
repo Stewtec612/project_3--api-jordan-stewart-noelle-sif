@@ -74,7 +74,7 @@ def display_all_fates():
 def save_fate():
     print('Fate Saved')
     # call DB / fate_store's
-    new_fate = api_manager.to_db()
+    new_fate = api_manager.create_fate_object()
     new_fate.save()
 
 
