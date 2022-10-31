@@ -1,5 +1,6 @@
 from fate_store import Fate
 import fate_store
+import api_manager
 
 def main(): 
     menu_text = '1. Today\'s Fate 2. Display Past Fates 3. Quit'
@@ -71,9 +72,10 @@ def display_all_fates():
 
 
 def save_fate():
-    print('todo save fate into the DB. Call save() db method')
+    print('Fate Saved')
     # call DB / fate_store's
-    fate_store.save()
+    new_fate = api_manager.to_db()
+    new_fate.save()
 
 
 
