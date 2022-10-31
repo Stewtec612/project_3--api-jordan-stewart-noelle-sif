@@ -7,12 +7,12 @@ from get_user_info import get_user_info
 
 zodiac_sign = get_user_info()[1]
 
-card_meaning = tarot_api.tarot_meaning_request()   
-card_name = tarot_api.tarot_name_request()   
-animal_name = animal_api.animal_name_request()
-animal_picture = animal_api.animal_picture_request()
-horoscope = horoscope_api.horoscope_details()
-time = horoscope_api.time()
+card_meaning = tarot_api.get_tarot_meaning()   
+card_name = tarot_api.get_tarot_name()   
+animal_name = animal_api.get_animal_name()
+animal_picture = animal_api.get_animal_picture()
+horoscope = horoscope_api.get_horoscope_details()
+time = horoscope_api.get_time_of_horoscope()
 
 api_data = {}
 
