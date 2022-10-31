@@ -1,4 +1,5 @@
-import re
+"""Recieving the request from the user. Use Request.args.get to retrieve information
+ask the seperate module to request the data"""
 from flask import Flask, render_template, request
 from fate_store import _get_all_fates
 
@@ -31,7 +32,7 @@ def mystic_results():
     tarot = tarot_card.get('tarot_data')
 
     # create new web page with results 
-    return render_template('results.html', animal=animal, horoscope=horoscope, animal_image_url=animal_url)
+    return render_template('results.html', animal_name=animal_name, horoscope=horoscope, animal_image_url=animal_url)
 
 
 if __name__ == '__main__':
