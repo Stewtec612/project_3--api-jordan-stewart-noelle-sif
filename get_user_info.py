@@ -8,41 +8,42 @@ def get_user_name():
     return user_name
 
 def get_user_sign():
-    dict_of_signs ={
-    'Aries':'aries',
+    while True:
+        dict_of_signs ={
+        'Aries':'aries',
 
-    'Taurus':'taurus',
+        'Taurus':'taurus',
 
-    'Gemini':'gemini',
+        'Gemini':'gemini',
 
-    'Cancer':'cancer',
+        'Cancer':'cancer',
 
-    'Leo':'leo',
+        'Leo':'leo',
 
-    'Virgo':'virgo',
+        'Virgo':'virgo',
 
-    'Libra': 'libra',
+        'Libra': 'libra',
 
-    'Scorpio':'scorpio',
+        'Scorpio':'scorpio',
 
-    'Sagittarius': 'sagittarius',
+        'Sagittarius': 'sagittarius',
 
-    'Capricorn':'capricorn',
+        'Capricorn':'capricorn',
 
-    'Aquarius':'aquarius',
+        'Aquarius':'aquarius',
 
-    'Pisces':'pisces'
-    }
-    for sign in dict_of_signs:
-        print(sign + '\n')
-    try:
-        user_sign = input(f'Please tell me your zodiac sign: ').lower()
-        if user_sign not in dict_of_signs.values():
-            raise ValueError
-    except ValueError:
-        print('ERROR: must enter a zodiac sign from the list')
-    else:
-        return user_sign
+        'Pisces':'pisces'
+        }
+        for sign in dict_of_signs:
+            print(sign)
+        try:
+            user_sign = input(f'Please tell me your zodiac sign: ').lower()
+            if user_sign not in dict_of_signs.values():
+                raise ValueError
+        except ValueError:
+            print('ERROR: must enter a zodiac sign from the list')
+        else:
+            return user_sign
 
 if __name__ == '__main__':
     main()
