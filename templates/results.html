@@ -31,17 +31,16 @@
 
     <div class="get_tarrot">
 
-        <h2>The voices have spoken <br> This is your spirit Animal and Tarot Card: </h2>  <!--images for favorite-sections-->
+        <h2>The voices have spoken <br> This is your Power Animal and Tarot Card: </h2>  <!--images for favorite-sections-->
 
-        Your animal is 
-        {{ animal }}
+        <h2>Your animal is: <br> {{ animal_name }}</h2>
 
             <img class="favorite-image" src="{{ animal_image_url }}" alt="Place holder for animal"
             title="animal"
             height="250"
             width="350">
         
-            <img class="favorite-image" src="tarot.jpg" alt="Place Holder for tarot"
+            <img class="favorite-image" src="{{ tarot_card_url }}" alt="Place Holder for tarot"
             title="tarot"
             height="250"
             width="350">
