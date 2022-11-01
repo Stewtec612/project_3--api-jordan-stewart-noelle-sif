@@ -8,9 +8,11 @@ def get_animal():
     response = requests.get(animal_url)
     animal_data = response.json()
 
+    # error handling!
+
     animal_picture = get_animal_picture()
     animal_name = get_animal_name() # TODO add back animal_data?
-    full_animal_info = [animal_name, animal_picture]
+    full_animal_info = [animal_name, animal_picture]  # a dictionary would be neater
 
     # for testing - currently just shows the link to the animal pic in the terminal
     print(full_animal_info)

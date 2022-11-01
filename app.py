@@ -16,13 +16,11 @@ def homepage():
 
 @app.route('/mystic_fetcher')
 def mystic_results():
-    zodiac = request.args.get('fates') 
-    print(zodiac)
 
     # what was the user's zodiac
     print('form data is', request.args)
     user_zodiac = request.args.get('zodiac') # gets the star sign that was selected by user
-
+    print(user_zodiac)
     # talk to apis
     # for example, api returns your spirit animal is zebra your horoscope is you will have a nice day 
     # this is example data, replace with data from the API 
