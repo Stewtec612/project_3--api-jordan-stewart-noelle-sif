@@ -1,7 +1,3 @@
-def main():
-    get_user_name()
-    get_user_sign()
-
 def get_user_name():
     user_name = input('What is your name, wonderer? ')
     
@@ -45,5 +41,10 @@ def get_user_sign():
         else:
             return user_sign
 
-if __name__ == '__main__':
-    main()
+#for testing
+# def main():
+#     get_user_name()
+#     get_user_sign()
+
+# if __name__ == '__main__':
+#     main()
