@@ -3,6 +3,9 @@ import requests
 
 
 def get_animal():
+    '''
+    this function is in charge of making requests to the random animal api url and select the name and picture out of the json object
+    '''
     try:
         # get an animal (at random) for the user, which includes the name & a picture
         animal_url = "https://zoo-animal-api.herokuapp.com/animals/rand"
@@ -17,12 +20,15 @@ def get_animal():
         # for testing - currently just shows the link to the animal pic in the terminal
         print(full_animal_info)
 
-        return full_animal_info,None
+        return full_animal_info, None
     except Exception as ex:
-        print(ex)
+        print(ex)#prints raised status of api url
         return None,ex
 
 def get_animal_picture(animal_data):
+    '''
+    In charge of selecting animal picture out of json object
+    '''
     #grabs the animal picture link from the API
     animal_picture = animal_data['image_link']
     if animal_picture is None:
@@ -32,6 +38,9 @@ def get_animal_picture(animal_data):
 
 
 def get_animal_name(animal_data):
+    '''
+    in charge of selecting the animal name out of json object
+    '''
     #grabs the animals name from the API
     animal_name = animal_data['name']
     if animal_name is None:
@@ -40,8 +49,10 @@ def get_animal_name(animal_data):
     else:
         return animal_name
     
-def main():
-    get_animal()
+#for testing
+        
+# def main():
+#     get_animal()
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
