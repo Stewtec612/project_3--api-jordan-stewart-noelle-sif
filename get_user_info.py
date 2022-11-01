@@ -1,39 +1,48 @@
 def main():
-    get_user_info()
+    get_user_name()
+    get_user_sign()
 
-def get_user_info():
+def get_user_name():
     user_name = input('What is your name, wonderer? ')
+    
+    return user_name
 
-    list_of_signs = '''
-    Aries—March 21-April 19
+def get_user_sign():
+    dict_of_signs ={
+    'Aries':'aries',
 
-    Taurus—April 20-May 20
+    'Taurus':'taurus',
 
-    Gemini—May 21-June 20
+    'Gemini':'gemini',
 
-    Cancer—June 21-July 22
+    'Cancer':'cancer',
 
-    Leo—July 23-August 22
+    'Leo':'leo',
 
-    Virgo—August 23-September 22
+    'Virgo':'virgo',
 
-    Libra—September 23-October 22
+    'Libra': 'libra',
 
-    Scorpio—October 23-November 21
+    'Scorpio':'scorpio',
 
-    Sagittarius—November 22-December 21
+    'Sagittarius': 'sagittarius',
 
-    Capricorn—December 22-January 19
+    'Capricorn':'capricorn',
 
-    Aquarius—Jan 20-February 18
+    'Aquarius':'aquarius',
 
-    Pisces—February 19-March 20
-________________________________________
-'''
-    print(list_of_signs)
-    user_sign = input(f'Please tell me your zodiac sign, {user_name}: ').lower()
-
-    return user_name, user_sign
+    'Pisces':'pisces'
+    }
+    for sign in dict_of_signs:
+        print(sign + '\n')
+    try:
+        user_sign = input(f'Please tell me your zodiac sign: ').lower()
+        if user_sign not in dict_of_signs.values():
+            raise ValueError
+    except ValueError:
+        print('ERROR: must enter a zodiac sign from the list')
+    else:
+        return user_sign
 
 if __name__ == '__main__':
     main()
