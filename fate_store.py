@@ -32,7 +32,7 @@ class Fate:
 class FateStore:
 
     def __init__(self):
-        create_table_sql = 'CREATE TABLE IF NOT EXISTS fates (zodiac_sign text, tarot_card TEXT, animal TEXT, horoscope TEXT'
+        create_table_sql = 'CREATE TABLE IF NOT EXISTS fates (zodiac_sign TEXT, tarot_card TEXT, animal TEXT, horoscope TEXT)'
         conn = sqlite3.connect(db)
         with conn:
             conn.execute(create_table_sql)

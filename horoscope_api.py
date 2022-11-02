@@ -22,8 +22,6 @@ def get_horoscope(user_sign):
     except Exception as ex:
         print(ex)   #prints raised status of api url
         return None,ex
-    
-    
 
 
         # for testing - we will still make some changes for formatting for the user
@@ -48,7 +46,9 @@ def get_horoscope_details(horoscope_data):
     else:
         return users_horoscope
 
+
     #get_horoscope(user_sign)
+
 
 # for testing during development
 # if __name__ == '__main__':
