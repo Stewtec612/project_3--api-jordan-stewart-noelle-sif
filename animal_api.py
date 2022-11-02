@@ -17,9 +17,6 @@ def get_animal():
         animal_name = get_animal_name(animal_data)
         full_animal_info = [animal_name, animal_picture]
 
-        # for testing - currently just shows the link to the animal pic in the terminal
-        print(full_animal_info)
-
         return full_animal_info, None
     except Exception as ex:
         print(ex)#prints raised status of api url
@@ -35,12 +32,12 @@ def get_animal_picture(animal_data):
         return None
     else:
         return animal_picture
-
-
+      
 def get_animal_name(animal_data):
     '''
     in charge of selecting the animal name out of json object
     '''
+    def get_animal_name():
     #grabs the animals name from the API
     animal_name = animal_data['name']
     if animal_name is None:
@@ -48,7 +45,7 @@ def get_animal_name(animal_data):
     
     else:
         return animal_name
-    
+      
 #for testing
         
 # def main():
@@ -56,3 +53,4 @@ def get_animal_name(animal_data):
 
 # if __name__ == '__main__':
 #     main()
+
