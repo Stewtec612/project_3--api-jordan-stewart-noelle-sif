@@ -45,8 +45,8 @@ def get_horoscope_details(horoscope_data):
     users_horoscope = horoscope_data['horoscope']
     if users_horoscope is None:
         return None
-
-    return users_horoscope
+    else:
+        return users_horoscope
 
     #get_horoscope(user_sign)
 
