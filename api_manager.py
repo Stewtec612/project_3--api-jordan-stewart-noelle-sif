@@ -15,13 +15,13 @@ def api_dictionary(user_sign):
     return api_data
 
 
-def create_fate_object():
+def create_fate_object(user_sign):
 
-    animal = animal_api.get_animal()
+    zodiac_sign = user_sign
     tarot_card = tarot_api.get_tarot_card()
-    horoscope = horoscope_api.get_horoscope()
-    zodiac_sign = get_user_sign()
-
+    animal = animal_api.get_animal()
+    horoscope = horoscope_api.get_horoscope(user_sign)
+    
     return Fate(zodiac_sign, tarot_card, animal, horoscope)
     
     
