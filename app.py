@@ -30,7 +30,7 @@ def mystic_results():
     horoscope = get_horoscope(user_zodiac)
     
     tarot_card_name = get_tarot_card()[0]
-    tarot_card_meaning = get_tarot_card[1]
+    tarot_card_meaning = get_tarot_card()[1]
 
 
     # # TODO for testing
