@@ -1,6 +1,6 @@
 from fate_store import Fate
-import fate_store
 import api_manager
+from get_user_info import get_user_name, get_user_sign
 
 def main(): 
     menu_text = '1. Today\'s Fate 2. Display Past Fates 3. Quit'
@@ -19,53 +19,21 @@ def main():
 
 
 def generate_new_fate():
-    print('todo ')
-    # todo potentially break down into further functions
-
-    zodiac_list = ["Aries—March 21-April 19",
-        "Taurus—April 20-May 20",
-        "Gemini—May 21-June 20",
-        "Cancer—June 21-July 22",
-        "Leo—July 23-August 22",
-        "Virgo—August 23-September 22",
-        "Libra—September 23-October 22",
-        "Scorpio—October 23-November 21", 
-        "Sagittarius—November 22-December 21",
-        "Capricorn—December 22-January 19",
-        "Aquarius—Jan 20-February 18",
-        "Pisces—February 19-March 20"]
+    get_user_name()
+    user_sign = get_user_sign()
 
 
-    def get_horoscope():
-        """ # needs to ask for user input (zodiac sign)
-        # needs to make calls to tarot (random), animal (random), & horoscope (user input zodiac) apis
-        # needs to gather this information """
+    """ Display the Fate object for user, and ask them in they wish to save it """
+    print("\n".join("{}\t{}".format(k, v) for k, v in api_manager.api_dictionary(user_sign).items()))
+    save_response = input('would you like to save your fate? y/n: ')
+
+    new_fate = api_manager.create_fate_object()
 
 
-        print('todo get user zodiac input, make call to horoscope API, and add to Fate object')
-        print(zodiac_list)
-        zodiac = input('Please enter your zodiac sign from the list: ')
-
-        # use zodiac to make api call
-
-
-    def get_tarot():
-        print('todo make call to api and get random tarot card, add to Fate object')
-
-
-    def get_animal():
-        print('todo make call to api and get random tarot card, add to Fate object')
-
-
-    def display_fate():
-        """ Display the Fate object for user, and ask them in they wish to save it """
-        print("\n".join("{}\t{}".format(k, v) for k, v in api_manager.api_dictionary().items()))
-        save_response = input('would you like to save your fate? y/n')
-
-        if save_response.lower() == 'y':
-            save_fate()
-        else:
-            main()
+    if save_response.lower() == 'y':
+        save_fate(new_fate)
+    else:
+        main()
 
 
 def display_all_fates():
@@ -74,10 +42,10 @@ def display_all_fates():
     Fate.view_all_fates()
 
 
-def save_fate():
+def save_fate(new_fate):
     print('Fate Saved')
     # call DB / fate_store's
-    new_fate = api_manager.create_fate_object()
+    # new_fate = api_manager.create_fate_object()
     new_fate.save()
 
 
