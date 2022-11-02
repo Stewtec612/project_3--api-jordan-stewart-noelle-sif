@@ -37,7 +37,6 @@ def get_animal_name(animal_data):
     '''
     in charge of selecting the animal name out of json object
     '''
-    def get_animal_name():
     #grabs the animals name from the API
     animal_name = animal_data['name']
     if animal_name is None:
