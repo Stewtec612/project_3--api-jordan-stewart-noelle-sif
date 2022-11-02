@@ -1,15 +1,18 @@
 """ Make calls to Horoscope API, get horoscope based on the user's sign """
 
 import requests
-from get_user_info import get_user_info
-
-user_sign = get_user_info()[1]
 
 
 def get_horoscope(user_sign):
+
+    user_sign = user_sign.lower()
     # get a user horoscope based of the user's sign, that includes the date of the horoscope
     horoscope_url = f'https://ohmanda.com/api/horoscope/{user_sign}'
     response = requests.get(horoscope_url)
+
+    # TODO error handling!!!! 
+
+    print(response)
     horoscope_data = response.json()
 
     time = get_time_of_horoscope(horoscope_data)
@@ -34,7 +37,7 @@ def get_horoscope_details(horoscope_data):
 
     return users_horoscope
 
-get_horoscope(user_sign)
+# get_horoscope(user_sign)
 
 # for testing during development
 # if __name__ == '__main__':
