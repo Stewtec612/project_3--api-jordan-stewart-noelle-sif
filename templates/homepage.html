@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lan="en"> <!--English-->
+<head>
+    <meta charset="UTF-8">  <!--8 common laungages-->
+    <title>My Mystic Fortune Teller </title>  <!--the title of the webpage-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_interface_styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet"> <!--imported fonts-->
+    <link rel="stylesheet" href="user_interface_styles.css">  <!-- My style sheet I made-->
+</head>
+<body class="MX-5"> 
+
+        <h1 id="page-title">My Mystic Fortune Teller</h1> <!--ID FOR PAGE TITLE-->
+        <h1 id="author-name">"A Message from the Powers that be"</h1> <!--ID FOR AUTHOR NAME-->
+
+<br>
+    <div class="get_date"> <!--divider for dividing content into logical sections-->
+        
+        <h2>Select your Zodiac Sign </h2>
+        <p>
+            
+        <form action="/mystic_fetcher">
+
+<!-- all inputs, selects go inside form  -->
+        <label for="select-zodiac">Select </label> <!--DROP DOWN MENU lable-->
+        <select name="zodiac" id="select-zodiac" style="background-color: rgb(136, 203, 241); border: 3px solid #1f097e;">
+            <option name="zodiac" value="Taurus">Taurus—April 20-May 20</option>
+            <option name="zodiac" value="Gemini">Gemini—May 21-June 20</option>
+            <option name="zodiac" value="Cancer">Cancer—June 21-July 22</option>
+            <option name="zodiac" value="Leo">Leo—July 23-August 22</option>
+            <option name="zodiac" value="Virgo">Virgo—August 23-September 22</option>
+            <option name="zodiac" value="Libra">Libra—September 23-October 22</option>
+            <option name="zodiac" value="Scorpio">Scorpio—October 23-November 21</option>
+            <option name="zodiac" value="Sagittarius">Sagittarius—November 22-December 21</option>
+            <option name="zodiac" value="Capricorn">Capricorn—December 22-January 19</option>
+            <option name="zodiac" value="Aquarius">Aquarius—Jan 20-February 18</option>
+            <option name="zodiac" value="Pisces">Pisces—February 19-March 20</option>
+        </select required> <br> <br>
+
+          
+                <input type="submit" value="Submit">  <!--add event listener-->
+              </form>
+            </p>
+    
+    </div> <!--END OF divider -->       
+  
+
+    </body>
+
+</html>

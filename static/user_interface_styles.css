@@ -1,0 +1,110 @@
+p {
+    color: rgb(71, 83, 83); /*font color*/
+    font-size: 25px;  /*font size*/
+}
+
+h1 { 
+    color: rgb(139, 134, 135);  /*font color*/
+    font-size: 48px; /*font size*/
+    text-align: center; /*Center the text*/
+    font-family: Arial, Helvetica, sans-serif; /*font style in prefered order*/
+}
+
+h2 {  /*Header 2 formating*/
+    font-size: 30px;
+    color: rgb(144, 5, 144);
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(to right, black, rgb(108, 32, 69));  /*change webpage background color*/
+    
+    font-family: Georgia, 'Times New Roman', Times, serif; /*request fonts in prefered order for the browser to read*/ 
+}
+
+li {     /*horoscope section*/
+    list-style-type:square; /*make list items square bulleted*/
+    list-style-position: inside; /*mAKES BULLET POINTS ALIGN TO TEXT*/
+    color: rgb(27, 33, 33);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;  /*center align text*/
+    padding: 3px;
+}
+
+a {  /*hyperlink*/
+    background-color: rgb(253, 182, 209); /*higlight area behind text*/
+    color: rgb(240, 109, 61); /*text color*/
+    text-decoration: none;   /*remove underline from hyperlink*/
+}
+
+
+#page-title {  /*id for page tittle */
+    text-shadow: 4px 4px rgb(9, 9, 9);  /*adding a colored shadow effect*/
+}
+
+#author-name {   /*me*/
+    color: rgb(170, 206, 189);
+    font-size: 24px;
+    text-shadow: 2px 2px rgb(38, 40, 40);
+    text-align: center;
+    text-decoration: wavy;
+}
+
+#get_horoscope {  /*hashtag for selecting by ID, only one element per ID*/
+    background-color: thistle;
+    text-decoration: underline;
+    margin-left: -40px; /*removing blank space that came from centering bullet points*/
+}
+
+#list-square {
+    text-align: center  /*step to make bullets center align*/
+}
+
+.second-favorite { /*. selecting class- multiple elements per class*/
+    background-color: rgb(255, 198, 220);
+    text-decoration: overline;
+    margin-left: -40px;  /*removing blank space that came from centering bullet points*/
+}
+
+.get_date{
+    background-color: rgb(251, 183, 253);  /*special background for sections*/
+    border: 6px #b27bb9 dashed; /*border for 3 favorite sections*/
+    margin: 20px; /* margins*/
+    padding: 20px;  /*space between sections*/
+}
+
+
+
+.get_horoscope {  /*organize favorite sections into blocks*/
+    background-color: rgb(251, 183, 253);  /*special background for sections*/
+    border: 6px #b27bb9 dashed; /*border for 3 favorite sections*/
+    margin: 20px; /* margins*/
+    padding: 20px;  /*space between sections*/
+}
+
+.favorite-sections{  /*FORMAT ENTIRE SECTION*/
+    background-color: lavenderblush;
+}
+
+img{   /*FORMAT TH# IMAGE ONLY*/
+    border: 4px solid #650472;  /*image border*/
+    border-radius: 50px;    /*curve of border*/
+    background-color:rgb(252, 47, 231);   /*background color behind photo*/
+    padding: 10px;   /*thickness of image boarder*/
+    margin-top: 10px;   /*margin between images*/
+    
+}
+
+.tarot_card {  /*FORMAT THE IMAGE SECTION AS A CLASS*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sources {
+    border: 2px #b27bb9 dashed; /*border for 3 favorite sections*/
+    padding: 10px; /*space between sections*/ 
+    border-radius: 10%; /*curve of border*/
+    margin-left: 10px;
+    margin-right: 10px;
+}
