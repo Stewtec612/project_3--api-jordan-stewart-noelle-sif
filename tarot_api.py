@@ -16,6 +16,8 @@ def get_tarot_card():
     # for testing
     print(full_tarot_card)
 
+    return full_tarot_card
+
 
 def get_tarot_name(tarot_data):
     #gets card name from API

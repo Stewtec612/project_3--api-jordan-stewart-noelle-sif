@@ -1,5 +1,5 @@
-def main():
-    get_user_info()
+# def main():
+#     get_user_info()
 
 def get_user_info():
     user_name = input('What is your name, wonderer? ')
@@ -35,5 +35,5 @@ ________________________________________
 
     return user_name, user_sign
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
