@@ -27,7 +27,7 @@ def generate_new_fate():
     print("\n".join("{}\t{}".format(k, v) for k, v in api_manager.api_dictionary(user_sign).items()))
     save_response = input('would you like to save your fate? y/n: ')
 
-    new_fate = api_manager.create_fate_object()
+    new_fate = api_manager.create_fate_object(user_sign)
 
 
     if save_response.lower() == 'y':
@@ -46,7 +46,7 @@ def save_fate(new_fate):
     print('Fate Saved')
     # call DB / fate_store's
     # new_fate = api_manager.create_fate_object()
-    new_fate.save()
+    Fate.save(new_fate)
 
 
 

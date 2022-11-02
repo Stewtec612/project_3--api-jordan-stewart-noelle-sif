@@ -3,7 +3,7 @@ ask the seperate module to request the data"""
 from flask import Flask, render_template, request
 from fate_store import Fate, FateStore
 
-from animal_api import get_animal_name, get_animal_picture
+from animal_api import get_animal
 from horoscope_api import get_horoscope
 from tarot_api import get_tarot_card
 # import API manager module 
@@ -25,9 +25,9 @@ def mystic_results():
     # for example, api returns your power animal is zebra your horoscope is you will have a nice day 
     # this is example data, replace with data from the API 
 
-    animal_name = get_animal_name()
+    animal_name = get_animal()[0]
     horoscope = get_horoscope(user_zodiac)
-    animal_image_url = get_animal_picture()
+    animal_image_url = get_animal()[1]
     tarot_card_url = get_tarot_card()
 
     # # TODO for testing
