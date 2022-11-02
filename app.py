@@ -22,16 +22,9 @@ def mystic_results():
     user_zodiac = request.args.get('zodiac') # gets the star sign that was selected by user
     print(user_zodiac)
     # talk to apis
-    # for example, api returns your spirit animal is zebra your horoscope is you will have a nice day 
+    # for example, api returns your power animal is zebra your horoscope is you will have a nice day 
     # this is example data, replace with data from the API 
 
-    # TODO remove
-    # animal_name = request.args.get('name')
-    # animal_pic = request.args.get('pic')
-    # horoscope = request.args.get('horoscope')
-    # tarot = get_tarot_card.get('tarot_data')
-
-    # TODO keep -- replaced above request.args with calls to API
     animal_name = get_animal_name()
     horoscope = get_horoscope(user_zodiac)
     animal_image_url = get_animal_picture()

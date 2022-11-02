@@ -1,21 +1,13 @@
 """ Make calls to Horoscope API, get horoscope based on the user's sign """
 
 import requests
-# from get_user_info import get_user_info
 
-# user_sign = get_user_info()[1]  # TODO original version -- this ends up getting called at the top of running app because not in a function?
-
-# def get_user_zodiac():
-#     user_sign = get_user_info()[1]
-#     return user_sign
 
 def get_horoscope(user_sign):
 
     user_sign = user_sign.lower()
     # get a user horoscope based of the user's sign, that includes the date of the horoscope
-    # user_sign = get_user_zodiac() # uses input, use info from web app
     horoscope_url = f'https://ohmanda.com/api/horoscope/{user_sign}'
-    print(f'HERE IS HOROSCOPE URL: {horoscope_url}')
     response = requests.get(horoscope_url)
 
     # TODO error handling!!!! 
