@@ -3,6 +3,7 @@ import api_manager
 import get_user_info
 import horoscope_api
 import animal_api
+import tarot_api
 
 def main(): 
     
@@ -33,6 +34,7 @@ def main():
 def generate_new_fate():
         get_user_horoscope()
         get_animal()
+        get_tarot_card()
 
         
         
@@ -55,6 +57,14 @@ def get_animal():
     #animal_data = animal_api.get_animal()
     animal_name = animal_api.get_animal()
     print(f'\nyour power animal is: {animal_name}\n')
+
+def get_tarot_card():
+     tarot_data = tarot_api.get_tarot_card()
+    #  tarot_name = tarot_api.get_tarot_name(tarot_data)
+    #  tarot_meaning = tarot_api.get_tarot_meaning(tarot_data)
+     tarot_results = print(f'\nyour card is: {tarot_data}')
+     print(tarot_results)
+     
 
 
 

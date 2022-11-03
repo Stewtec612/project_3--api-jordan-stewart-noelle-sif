@@ -18,7 +18,7 @@ def get_tarot_card():
 
         full_tarot_card = [tarot_card_name, tarot_card_meaning]
 
-        return full_tarot_card,None
+        return full_tarot_card,#None
     
     except Exception as ex:
         print(ex)
