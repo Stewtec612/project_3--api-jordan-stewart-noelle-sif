@@ -6,6 +6,9 @@ import animal_api
 import tarot_api
 
 def main(): 
+        '''
+        in charge of loading a menu with options and derect the program to those objects and back
+        '''
     
         mystic_menu = '''
         1.) Fate of Today 
@@ -32,9 +35,13 @@ def main():
 
 
 def generate_new_fate():
+        '''
+        when the user selects option 1, it will ask for their zodiac sign and return the user a horoscope, a power animal, and a tarot card to display and the user has the option to save all of them as 1 sql string
+        '''
         get_user_horoscope()
         get_animal()
         get_tarot_card()
+
 
         
         
@@ -48,17 +55,26 @@ def generate_new_fate():
         
 
 def get_user_horoscope():
+    ''' 
+    retrieves the returned horoscope from get_user_info
+    '''
     user_sign = get_user_info.get_user_sign()
 
     new_fate = api_manager.create_fate_object(user_sign)
 
 
 def get_animal():
+    '''
+    retrieve the randomly generated animal from animal api
+    '''
     #animal_data = animal_api.get_animal()
     animal_name = animal_api.get_animal()
     print(f'\nyour power animal is: {animal_name}\n')
 
 def get_tarot_card():
+     '''
+     retrieves the returned horoscope data from tarot_api
+     '''
      tarot_data = tarot_api.get_tarot_card()
     #  tarot_name = tarot_api.get_tarot_name(tarot_data)
     #  tarot_meaning = tarot_api.get_tarot_meaning(tarot_data)
