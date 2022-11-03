@@ -1,7 +1,7 @@
 """ Manage API information. Get API information from individual API modules, send packaged results to user_interface """
-import tarot_api
-import animal_api
-import horoscope_api
+import apis.tarot_api as tarot_api
+import apis.animal_api as animal_api
+import apis.horoscope_api as horoscope_api
 from fate_store import Fate
 from get_user_info import get_user_sign
 
