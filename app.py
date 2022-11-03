@@ -25,8 +25,7 @@ def mystic_results():
     # for example, api returns your power animal is zebra your horoscope is you will have a nice day 
     # this is example data, replace with data from the API 
 
-    animal_name = get_animal()[0]
-    animal_image_url = get_animal()[1]
+    full_animal_info = get_animal()
     horoscope = get_horoscope(user_zodiac)
     
     tarot_card_name = get_tarot_card()[0]
@@ -40,7 +39,7 @@ def mystic_results():
     # tarot_card_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/255px-RWS_Tarot_00_Fool.jpg'
 
     # create new web page with results 
-    return render_template('results.html', animal_name=animal_name, horoscope=horoscope, animal_image_url=animal_image_url, tarot_card_name=tarot_card_name,tarot_card_meaning=tarot_card_meaning)
+    return render_template('results.html', animal_name=full_animal_info[0], horoscope=horoscope, animal_image_url=full_animal_info[1], tarot_card_name=tarot_card_name,tarot_card_meaning=tarot_card_meaning)
 
 
 @app.route('/save_fate', methods=['POST'])
