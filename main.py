@@ -45,7 +45,7 @@ def generate_new_fate():
         tarot_data = tarot_api.get_tarot_card()
         #tarot_results = print(f'\nyour card is: {tarot_data}')
 
-        full_fate_dict = {"todays Date": horoscope[0], "Your sign: ": user_sign,"Your Horoscope: ": horoscope[1],"your power animal is: ": animal_name[0], "As well as a link to it's image: ": animal_name[1],
+        full_fate_dict = {"todays Date: ": horoscope[1], "Your sign: ": user_sign,"Your Horoscope: ": horoscope[0],"your power animal is: ": animal_name[0], "As well as a link to it's image: ": animal_name[1],
         "Your tarot card's name: ": tarot_data[0], "And it's description: ": tarot_data[1] }
         # print(tarot_results)
         # get_animal()
