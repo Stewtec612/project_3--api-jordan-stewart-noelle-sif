@@ -1,13 +1,19 @@
+import unittest
 import requests
+from unittest import TestCase
+import animal_api
 from pprint import pprint
 
-power_animal_url = 'https://zoo-animal-api.herokuapp.com/animals/rand'
 
-response = requests.get(power_animal_url)
+class TestAnimal(TestCase):
+    def test_get_time(self):
+        example_animal_response = {
+            'date': '2022-11-01', 
+            }
+        time = animal_api.get_time_of_animal(example_animal_response)
+        self.assertEqual(time, '2022-02-02')
 
-data = response.json()
 
-power_animal_name = data['name']
+if __name__ == '__main__':
+    unittest.main()
 
-
-print(f'your power animal is: {power_animal_name}')

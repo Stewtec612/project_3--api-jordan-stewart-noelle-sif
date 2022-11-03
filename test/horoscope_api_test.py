@@ -1,22 +1,20 @@
+import unittest
 import requests
+from unittest import TestCase
+import horoscope_api
 from pprint import pprint
 
-users_sign = input('enter your zodiac sign: ').lower()
 
-horoscope_url = f'https://ohmanda.com/api/horoscope/{users_sign}'
-
-response = requests.get(horoscope_url)
-
-data = response.json()
-
-date = data['date']
-zodiac_sign = data['sign']
-horoscope = data['horoscope']
+class TestHoroscope(TestCase):
+    def test_get_time(self):
+        example_horoscope_response = {
+            'date': '2022-11-01', 
+            'horoscope': 'whatever'
+            }
+        time = horoscope_api.get_time_of_horoscope(example_horoscope_response)
+        self.assertEqual(time, '2022-02-02')
 
 
+if __name__ == '__main__':
+    unittest.main()
 
-
-
-print(f'Today\'s date: {date}\n')
-print(f'Zodiac sign: {zodiac_sign}\n')
-pprint(horoscope)
