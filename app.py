@@ -14,7 +14,7 @@ app = Flask(__name__)
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/results')
+@app.route('/mystic_fetcher')
 def mystic_results():
 
     # what was the user's zodiac
