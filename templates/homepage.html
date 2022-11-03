@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lan="en"> <!--English-->
+<meta charset="UTF-8">  <!--8 common laungages-->
+
 <head>
-    <meta charset="UTF-8">  <!--8 common laungages-->
     <title>My Mystic Fortune Teller </title>  <!--the title of the webpage-->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_interface_styles.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet"> <!--imported fonts-->
-    <link rel="stylesheet" href="user_interface_styles.css">  <!-- My style sheet I made-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ui.css') }}">
 </head>
 <body class="MX-5"> 
 
@@ -18,7 +17,7 @@
         <h2>Select your Zodiac Sign </h2>
         <p>
             
-        <form action="/mystic_fetcher">
+        <form action="results.html">
 
 <!-- all inputs, selects go inside form  -->
         <label for="select-zodiac">Select </label> <!--DROP DOWN MENU lable-->
@@ -36,8 +35,10 @@
             <option name="zodiac" value="Pisces">Pisces—February 19-March 20</option>
         </select required> <br> <br>
 
-          
-                <input type="submit" value="Submit">  <!--add event listener-->
+          <a href="results.html">
+            <input type="submit" value="Submit">  <!--add event listener-->
+
+          </a>
               </form>
             </p>
     

@@ -1,6 +1,6 @@
 """Recieving the request from the user. Use Request.args.get to retrieve information
 ask the seperate module to request the data"""
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request
 from fate_store import Fate, FateStore
 
 from animal_api import get_animal_name, get_animal_picture
@@ -14,7 +14,7 @@ app = Flask(__name__)
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/mystic_fetcher')
+@app.route('/results')
 def mystic_results():
 
     # what was the user's zodiac
