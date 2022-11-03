@@ -3,9 +3,9 @@ ask the seperate module to request the data"""
 from flask import Flask, render_template, request
 from fate_store import Fate, FateStore
 
-from animal_api import get_animal
-from horoscope_api import get_horoscope
-from tarot_api import get_tarot_card
+from apis.animal_api import get_animal
+from apis.horoscope_api import get_horoscope
+from apis.tarot_api import get_tarot_card
 # import API manager module 
 
 app = Flask(__name__)
