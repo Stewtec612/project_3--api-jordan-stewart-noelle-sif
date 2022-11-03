@@ -16,9 +16,11 @@ def get_tarot_card():
         tarot_card_name = get_tarot_name(tarot_data)
         tarot_card_meaning = get_tarot_meaning(tarot_data)
 
-        full_tarot_card = [tarot_card_name, tarot_card_meaning]
+        full_tarot_card = [ tarot_card_name, tarot_card_meaning]
 
-        return full_tarot_card,None
+
+        return full_tarot_card
+
     
     except Exception as ex:
         print(ex)
@@ -26,7 +28,6 @@ def get_tarot_card():
         # for testing
         #print(full_tarot_card)
 
-    return full_tarot_card
 
 
 def get_tarot_name(tarot_data):

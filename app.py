@@ -28,8 +28,7 @@ def mystic_results():
     full_animal_info = get_animal()
     horoscope = get_horoscope(user_zodiac)
     
-    tarot_card_name = get_tarot_card()[0]
-    tarot_card_meaning = get_tarot_card()[1]
+    full_tarot_info = get_tarot_card()
 
 
     # # TODO for testing
@@ -39,7 +38,7 @@ def mystic_results():
     # tarot_card_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/255px-RWS_Tarot_00_Fool.jpg'
 
     # create new web page with results 
-    return render_template('results.html', animal_name=full_animal_info[0], horoscope=horoscope, animal_image_url=full_animal_info[1], tarot_card_name=tarot_card_name,tarot_card_meaning=tarot_card_meaning)
+    return render_template('results.html', animal_name=full_animal_info[0], horoscope=horoscope, animal_image_url=full_animal_info[1], tarot_card_name=full_tarot_info[0],tarot_card_meaning=full_tarot_info[1])
 
 
 @app.route('/save_fate', methods=['POST'])
