@@ -17,7 +17,7 @@ def get_horoscope(user_sign):
         details = get_horoscope_details(horoscope_data)
         full_horoscope = [time, details]
 
-        return full_horoscope,None
+        return full_horoscope
     
     except Exception as ex:
         print(ex)   #prints raised status of api url
