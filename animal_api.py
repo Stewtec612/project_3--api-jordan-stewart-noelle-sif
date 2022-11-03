@@ -17,7 +17,7 @@ def get_animal():
         animal_name = get_animal_name(animal_data)
         full_animal_info = [animal_name, animal_picture]
 
-        return full_animal_info, None
+        return full_animal_info, #None
     except Exception as ex:
         print(ex)#prints raised status of api url
         return None,ex
